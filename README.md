@@ -1,17 +1,5 @@
-# Gatsby Plugin Boilerplate
+# gatsby-plugin-source-product-markdown
 
-A simple Gatsby plugin boilerplate.
+WIP
 
-## Getting started
-
-```bash
-git clone git@github.com:escaladesports/gatsby-plugin-boilerplate.git your-module
-cd your-module
-yarn
-yarn reset
-```
-
-## Usage
-
-- `yarn test`: Run mocha tests
-- `yarn analyze`: View bundle sizes
+A Gatsby source plugin for product information in markdown files
