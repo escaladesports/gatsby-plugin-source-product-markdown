@@ -30,6 +30,9 @@ _optimize
 ./gatsby-node.js
 ./gatsby-browser.js
 ./gatsby-ssr.js
+./gatsby-node.js.map
+./gatsby-browser.js.map
+./gatsby-ssr.js.map
 
 # Temporary
 temp

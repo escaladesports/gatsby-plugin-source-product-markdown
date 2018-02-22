@@ -4,18 +4,20 @@
   "keywords": [
     "gatsby",
     "plugin",
-    "boilerplate"
+    "source",
+    "product",
+    "markdown"
   ],
-  "main": "dist/index.js",
+  "main": "gatsby-node.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/gatsby-plugin-boilerplate.git"
+    "url": "https://github.com/escaladesports/gatsby-plugin-source-product-markdown.git"
   },
   "license": "MIT",
   "scripts": {
     "analyze": "esca-scripts analyze --input './src/gatsby-browser.js'",
-    "build": "esca-scripts build --input src --output dist --multiple --react --babel",
+    "build": "esca-scripts build --input src --output . --multiple --react --babel",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "npm run build && esca-scripts test"
@@ -24,6 +26,9 @@
     "esca-scripts": "^0.14.1"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "front-matter": "^2.3.0",
+    "globby": "^8.0.1",
+    "read-markdown": "^1.0.2"
   }
 }
