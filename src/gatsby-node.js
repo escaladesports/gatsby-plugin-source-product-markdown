@@ -52,7 +52,6 @@ export async function sourceNodes({ boundActionCreators }, options){
 	const { createNode } = boundActionCreators
 
 	let data = await readMarkdown(options.path, { results: `array` })
-	console.log(data)
 	data = data.map(data => {
 		data.data[options.content] = data[options.content]
 		delete data[options.content]
