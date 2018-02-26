@@ -59,8 +59,9 @@ export async function sourceNodes({ boundActionCreators }, options){
 	})
 	data = unpackAllVariants(data, options)
 	data.forEach(datum => {
-		//datum.productId = datum[options.id]
+		datum.productId = datum[options.id]
 		//datum.id = `ProductMarkdown-${datum[options.id]}`
+		//console.log(datum)
 		datum = {
 			parent: null,
 			children: [],

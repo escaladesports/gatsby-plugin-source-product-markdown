@@ -52,8 +52,9 @@ var sourceNodes = exports.sourceNodes = function () {
 						});
 						data = unpackAllVariants(data, options);
 						data.forEach(function (datum) {
-							//datum.productId = datum[options.id]
+							datum.productId = datum[options.id];
 							//datum.id = `ProductMarkdown-${datum[options.id]}`
+							console.log(datum);
 							datum = (0, _extends3.default)({
 								parent: null,
 								children: [],
