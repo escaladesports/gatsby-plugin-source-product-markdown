@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-source-product-markdown",
+  "name": "gatsby-source-product-markdown",
   "version": "1.0.4",
   "keywords": [
     "gatsby",
@@ -12,7 +12,7 @@
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/gatsby-plugin-source-product-markdown.git"
+    "url": "https://github.com/escaladesports/gatsby-source-product-markdown.git"
   },
   "license": "MIT",
   "scripts": {
@@ -21,7 +21,7 @@
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "npm run build && esca-scripts test",
-    "travis": "opn https://travis-ci.org/escaladesports/gatsby-plugin-source-product-markdown/branches"
+    "travis": "opn https://travis-ci.org/escaladesports/gatsby-source-product-markdown/branches"
   },
   "devDependencies": {
     "esca-scripts": "^0.14.1",
