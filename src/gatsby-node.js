@@ -46,15 +46,14 @@ export async function sourceNodes({ boundActionCreators }, options){
 	options = {
 		path: `./src/markdown/products/**/*.md`,
 		id: `id`,
-		content: `content`,
+		body: `body`,
 		...options
 	}
 	const { createNode } = boundActionCreators
 
 	let data = await readMarkdown(options.path, { results: `array` })
 	data = data.map(data => {
-		data.data[options.content] = data[options.content]
-		delete data[options.content]
+		data.data[options.body] = data.content
 		return data.data
 	})
 	data = unpackAllVariants(data, options)
