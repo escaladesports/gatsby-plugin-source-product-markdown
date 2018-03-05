@@ -13,10 +13,6 @@ var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
 var _typeof2 = require('babel-runtime/helpers/typeof');
 
 var _typeof3 = _interopRequireDefault(_typeof2);
@@ -36,7 +32,7 @@ var sourceNodes = exports.sourceNodes = function () {
 						options = (0, _extends3.default)({
 							path: './src/markdown/products/**/*.md',
 							id: 'id',
-							content: 'content'
+							body: 'body'
 						}, options);
 						createNode = boundActionCreators.createNode;
 						_context.next = 4;
@@ -46,8 +42,7 @@ var sourceNodes = exports.sourceNodes = function () {
 						data = _context.sent;
 
 						data = data.map(function (data) {
-							data.data[options.content] = data[options.content];
-							delete data[options.content];
+							data.data[options.body] = data.content;
 							return data.data;
 						});
 						data = unpackAllVariants(data, options);
@@ -127,7 +122,7 @@ function unpackVariants(obj, options) {
 		products.push(product);
 	});
 	products.forEach(function (product) {
-		var variantsArr = [].concat((0, _toConsumableArray3.default)(variants));
+		var variantsArr = [].concat(products);
 		var index = variantsArr.indexOf(product.id);
 		variantsArr.splice(index, 1);
 		product.variants = variantsArr;

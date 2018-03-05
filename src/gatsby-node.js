@@ -34,7 +34,7 @@ function unpackVariants(obj, options) {
 		products.push(product)
 	})
 	products.forEach(product => {
-		let variantsArr = [ ...variants ]
+		let variantsArr = [ ...products ]
 		let index = variantsArr.indexOf(product.id)
 		variantsArr.splice(index, 1)
 		product.variants = variantsArr
