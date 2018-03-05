@@ -34,7 +34,14 @@ function unpackVariants(obj, options) {
 		products.push(product)
 	})
 	products.forEach(product => {
-		let variantsArr = [ ...products ]
+		let productsClone = products.map(product => {
+			let obj = {
+				...product
+			}
+			delete obj.variants
+			return obj
+		})
+		let variantsArr = [ ...productsClone ]
 		let index = variantsArr.indexOf(product.id)
 		variantsArr.splice(index, 1)
 		product.variants = variantsArr
