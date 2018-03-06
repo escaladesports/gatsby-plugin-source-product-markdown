@@ -42,8 +42,13 @@ function unpackVariants(obj, options) {
 			return obj
 		})
 		let variantsArr = [ ...productsClone ]
-		let index = variantsArr.indexOf(product.id)
-		variantsArr.splice(index, 1)
+
+		for(let i = variantsArr.length; i--;){
+			if(variantsArr[i].id === product.id){
+				variantsArr.splice(i, 1)
+			}
+		}
+
 		product.variants = variantsArr
 	})
 	return products

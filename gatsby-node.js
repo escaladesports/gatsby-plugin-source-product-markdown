@@ -13,6 +13,10 @@ var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
+var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');
+
+var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
 var _typeof2 = require('babel-runtime/helpers/typeof');
 
 var _typeof3 = _interopRequireDefault(_typeof2);
@@ -122,9 +126,22 @@ function unpackVariants(obj, options) {
 		products.push(product);
 	});
 	products.forEach(function (product) {
-		var variantsArr = [].concat(products);
-		var index = variantsArr.indexOf(product.id);
-		variantsArr.splice(index, 1);
+		var productsClone = products.map(function (product) {
+			var obj = (0, _extends3.default)({}, product);
+			delete obj.variants;
+			return obj;
+		});
+		var variantsArr = [].concat((0, _toConsumableArray3.default)(productsClone));
+
+		for (var i = variantsArr.length; i--;) {
+			if (variantsArr[i].id === product.id) {
+				variantsArr.splice(i, 1);
+			}
+		}
+
+		if (product.id === 'A4CB21005R') {
+			console.log(variantsArr);
+		}
 		product.variants = variantsArr;
 	});
 	return products;
